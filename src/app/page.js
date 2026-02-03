@@ -474,7 +474,7 @@ export default function Portfolio() {
                   </a>
 
                   <a 
-                    href="https://linkedin.com" 
+                    href="www.linkedin.com/in/piyush-patwa-21b9b6352" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center gap-3 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300 group hover:scale-105"
@@ -502,7 +502,7 @@ export default function Portfolio() {
                   </a>
 
                   <a 
-                    href="https://instagram.com" 
+                    href="https://www.instagram.com/just_.piyush_?igsh=MWNiNTM0NXhhb2dqeA==" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center gap-3 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300 group hover:scale-105"
