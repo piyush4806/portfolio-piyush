@@ -460,7 +460,7 @@ export default function Portfolio() {
                 <h3 className="text-2xl font-bold mb-6 gradient-text-pink">Follow Me</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <a 
-                    href="https://github.com" 
+                    href="https://github.com/piyush4806" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-col items-center gap-3 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all duration-300 group hover:scale-105"
