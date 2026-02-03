@@ -275,7 +275,7 @@ export default function Portfolio() {
 
             <div className="animate-fadeInUp delay-300 mb-8">
               <h2 className="text-2xl md:text-4xl font-light text-gray-300 mb-4">
-                Student · <span className="gradient-text-blue font-semibold">Frontend Developer</span>
+                Student · <span className="gradient-text-blue font-semibold">Developer</span>
               </h2>
               <p className="text-xl text-gray-400">AI & Design Explorer</p>
             </div>
