@@ -2,7 +2,7 @@
 
 export default function Portfolio() {
   const skills = [
-    { title: "Frontend Development", desc: "HTML, CSS, JavaScript, Basics of Next.js", icon: "💻" },
+    { title: "Development", desc: "HTML, CSS, JavaScript, Basics of Next.js", icon: "💻" },
     { title: "Design Tools", desc: "Figma, UI Design, Layout Structuring", icon: "🎨" },
     { title: "Soft Skills", desc: "Communication, Problem Solving, Teamwork", icon: "🤝" },
     { title: "Languages", desc: "English · Hindi · Marathi", icon: "🌐" },
@@ -10,7 +10,7 @@ export default function Portfolio() {
 
   const qualifications = [
     { icon: "🎓", title: "Class 12th", subtitle: "2024–25", year: "2025" },
-    { icon: "📘", title: "Class 10th", subtitle: "2021–22", year: "2022" },
+    { icon: "📘", title: "Class 10th", subtitle: "2022–23", year: "2023" },
     { icon: "🤖", title: "B.Voc in AI & ML", subtitle: "Nexcore Institute", year: "Current" },
   ];
 
