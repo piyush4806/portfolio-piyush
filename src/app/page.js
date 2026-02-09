@@ -435,7 +435,7 @@ export default function Portfolio() {
                     <div className="min-w-0 flex-1">
                       <p className="text-xs sm:text-sm text-gray-400">Email</p>
                       <p className="font-medium text-sm sm:text-base truncate">
-                        piyushpatwa@example.com
+                        patwapiyush940@gmail.com
                       </p>
                     </div>
                   </a>
@@ -460,7 +460,7 @@ export default function Portfolio() {
                     <div className="min-w-0 flex-1">
                       <p className="text-xs sm:text-sm text-gray-400">Phone</p>
                       <p className="font-medium text-sm sm:text-base">
-                        +91 98765 43210
+                        +91 9619825701
                       </p>
                     </div>
                   </a>
