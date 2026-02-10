@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import MobileNav from "@/components/MobileNav";
 
 export default function Contact() {
   const contactMethods = [
@@ -104,34 +105,7 @@ export default function Contact() {
       <div className="fixed top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse-custom"></div>
       <div className="fixed bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse-custom" style={{ animationDelay: "1s" }}></div>
 
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 glass-card mx-0 mt-0 rounded-none animate-fadeIn">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
-          <div className="flex justify-between items-center">
-            <Link href="/" className="font-bold text-lg sm:text-xl">
-              <span className="gradient-text">PP</span>
-            </Link>
-
-            <div className="flex items-center gap-6">
-              <Link href="/" className="text-sm text-slate-400 hover:text-white transition-colors">
-                Home
-              </Link>
-              <Link href="/about" className="text-sm text-slate-400 hover:text-white transition-colors">
-                About
-              </Link>
-              <Link href="/skills" className="text-sm text-slate-400 hover:text-white transition-colors">
-                Skills
-              </Link>
-              <Link href="/projects" className="text-sm text-slate-400 hover:text-white transition-colors">
-                Projects
-              </Link>
-              <Link href="/contact" className="text-sm text-white font-semibold transition-colors">
-                Contact
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <MobileNav />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-24 sm:pt-32 pb-12 sm:pb-20">
         {/* Header */}
