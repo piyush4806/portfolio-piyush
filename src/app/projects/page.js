@@ -86,41 +86,41 @@ export default function Projects() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-24 sm:pt-32 pb-12 sm:pb-20">
         {/* Header */}
-        <div className="text-center mb-20 animate-fadeInUp">
-          <div className="inline-block mb-6">
-            <div className="flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-full">
-              <span className="text-3xl">💼</span>
-              <span className="text-sm font-semibold text-blue-300">Portfolio Showcase</span>
+        <div className="text-center mb-12 sm:mb-20 animate-fadeInUp">
+          <div className="inline-block mb-4 sm:mb-6">
+            <div className="flex items-center justify-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-full">
+              <span className="text-2xl sm:text-3xl">💼</span>
+              <span className="text-xs sm:text-sm font-semibold text-blue-300">Portfolio Showcase</span>
             </div>
           </div>
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold mb-6" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-4 sm:mb-6 px-4" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
             <span className="gradient-text">Featured Projects</span>
           </h1>
-          <p className="text-lg sm:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed px-4">
             A curated collection of my best work, showcasing expertise in web development, UI/UX design, and modern technologies
           </p>
           
           {/* Stats */}
-          <div className="flex justify-center gap-8 mt-10">
+          <div className="flex justify-center gap-4 sm:gap-8 mt-8 sm:mt-10 px-4">
             <div className="text-center">
-              <div className="text-3xl font-bold gradient-text mb-1">15+</div>
-              <div className="text-sm text-slate-500">Projects</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">15+</div>
+              <div className="text-xs sm:text-sm text-slate-500">Projects</div>
             </div>
             <div className="w-px bg-slate-700"></div>
             <div className="text-center">
-              <div className="text-3xl font-bold gradient-text mb-1">10+</div>
-              <div className="text-sm text-slate-500">Technologies</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">10+</div>
+              <div className="text-xs sm:text-sm text-slate-500">Technologies</div>
             </div>
             <div className="w-px bg-slate-700"></div>
             <div className="text-center">
-              <div className="text-3xl font-bold gradient-text mb-1">100%</div>
-              <div className="text-sm text-slate-500">Dedication</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">100%</div>
+              <div className="text-xs sm:text-sm text-slate-500">Dedication</div>
             </div>
           </div>
         </div>
 
         {/* Featured Projects Grid */}
-        <div className="mb-20 space-y-12 animate-fadeInUp delay-200">
+        <div className="mb-12 sm:mb-20 space-y-8 sm:space-y-12 animate-fadeInUp delay-200">
           {featuredProjects.map((project, idx) => (
             <div 
               key={idx} 
@@ -132,17 +132,17 @@ export default function Projects() {
               {/* Gradient Border Effect */}
               <div className={`absolute inset-0 bg-gradient-to-r ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl`}></div>
               
-              <div className="relative grid md:grid-cols-5 gap-0">
-                {/* Image Section - 2 columns */}
-                <div className="md:col-span-2 relative overflow-hidden">
+              <div className="relative grid grid-cols-1 md:grid-cols-5 gap-0">
+                {/* Image Section - 2 columns on desktop, full width on mobile */}
+                <div className="md:col-span-2 relative overflow-hidden order-1">
                   <div className="absolute top-4 left-4 z-20">
-                    <div className={`px-4 py-2 bg-gradient-to-r ${project.gradient} rounded-full text-xs font-bold flex items-center gap-2 shadow-lg`}>
-                      <span className="text-xl">{project.icon}</span>
-                      {project.tag}
+                    <div className={`px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r ${project.gradient} rounded-full text-xs font-bold flex items-center gap-2 shadow-lg`}>
+                      <span className="text-lg sm:text-xl">{project.icon}</span>
+                      <span className="hidden sm:inline">{project.tag}</span>
                     </div>
                   </div>
                   
-                  <div className="relative h-full min-h-[300px] md:min-h-[400px]">
+                  <div className="relative h-64 sm:h-full sm:min-h-[400px]">
                     <img 
                       src={project.image} 
                       alt={project.title}
@@ -153,24 +153,24 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* Content Section - 3 columns */}
-                <div className="md:col-span-3 p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
+                {/* Content Section - 3 columns on desktop, full width on mobile */}
+                <div className="md:col-span-3 p-6 sm:p-8 lg:p-12 flex flex-col justify-center order-2">
                   {/* Title */}
-                  <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent`}>
+                  <h2 className={`text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent`}>
                     {project.title}
                   </h2>
 
                   {/* Description */}
-                  <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-6">
+                  <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed mb-4 sm:mb-6">
                     {project.desc}
                   </p>
 
                   {/* Features */}
-                  <div className="grid grid-cols-2 gap-3 mb-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 mb-4 sm:mb-6">
                     {project.features.map((feature, i) => (
-                      <div key={i} className="flex items-start gap-2 text-sm text-slate-400">
-                        <div className={`w-5 h-5 rounded-full bg-gradient-to-r ${project.gradient} flex items-center justify-center flex-shrink-0 mt-0.5`}>
-                          <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <div key={i} className="flex items-start gap-2 text-xs sm:text-sm text-slate-400">
+                        <div className={`w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-r ${project.gradient} flex items-center justify-center flex-shrink-0 mt-0.5`}>
+                          <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
                           </svg>
                         </div>
@@ -180,13 +180,13 @@ export default function Projects() {
                   </div>
 
                   {/* Tech Stack */}
-                  <div className="mb-8">
-                    <p className="text-xs text-slate-500 mb-3 uppercase tracking-wider font-semibold">Technologies Used</p>
+                  <div className="mb-6 sm:mb-8">
+                    <p className="text-xs text-slate-500 mb-2 sm:mb-3 uppercase tracking-wider font-semibold">Technologies Used</p>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech, i) => (
                         <span 
                           key={i} 
-                          className={`px-4 py-2 bg-gradient-to-r ${project.gradient} bg-opacity-10 border border-slate-700 rounded-lg text-sm font-medium text-white hover:scale-105 transition-transform duration-300`}
+                          className={`px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r ${project.gradient} bg-opacity-10 border border-slate-700 rounded-lg text-xs sm:text-sm font-medium text-white hover:scale-105 transition-transform duration-300`}
                         >
                           {tech}
                         </span>
@@ -197,14 +197,15 @@ export default function Projects() {
                   {/* CTA Button */}
                   <Link
                     href={project.link}
-                    className={`inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r ${project.gradient} hover:shadow-2xl rounded-xl text-base font-bold shadow-lg hover:scale-105 transition-all duration-300 group/btn`}
+                    className={`inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r ${project.gradient} hover:shadow-2xl rounded-xl text-sm sm:text-base font-bold shadow-lg hover:scale-105 transition-all duration-300 group/btn`}
                   >
-                    <svg className="w-5 h-5 group-hover/btn:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
-                    View Live Demo
-                    <svg className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span className="hidden sm:inline">View Live Demo</span>
+                    <span className="sm:hidden">View Demo</span>
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
                   </Link>
@@ -216,25 +217,25 @@ export default function Projects() {
 
         {/* Other Projects */}
         <div className="animate-fadeInUp delay-400">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+          <div className="text-center mb-8 sm:mb-12 px-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               <span className="gradient-text-blue">Design Projects</span>
             </h2>
-            <p className="text-slate-400">UI/UX designs and prototypes created in Figma</p>
+            <p className="text-sm sm:text-base text-slate-400">UI/UX designs and prototypes created in Figma</p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
             {projects.map((project, i) => (
               <a
                 key={i}
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="glass-card p-8 group hover:scale-105 transition-all duration-300 cursor-pointer"
+                className="glass-card p-6 sm:p-8 group hover:scale-105 transition-all duration-300 cursor-pointer"
               >
                 {/* Icon & Tag */}
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-5xl group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-4xl sm:text-5xl group-hover:scale-110 transition-transform duration-300">
                     {project.icon}
                   </div>
                   <div className={`px-3 py-1 bg-${project.color}-500/20 border border-${project.color}-500/30 rounded-full text-xs font-semibold text-${project.color}-300`}>
@@ -243,12 +244,12 @@ export default function Projects() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold mb-3 text-white group-hover:gradient-text transition-all duration-300">
+                <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:gradient-text transition-all duration-300">
                   {project.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-slate-400 leading-relaxed mb-4">
+                <p className="text-sm sm:text-base text-slate-400 leading-relaxed mb-4">
                   {project.desc}
                 </p>
 
@@ -262,9 +263,9 @@ export default function Projects() {
                 </div>
 
                 {/* Link */}
-                <div className="flex items-center gap-2 text-blue-400 font-semibold group-hover:gap-4 transition-all duration-300">
+                <div className="flex items-center gap-2 text-sm sm:text-base text-blue-400 font-semibold group-hover:gap-4 transition-all duration-300">
                   <span>View in Figma</span>
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                   </svg>
                 </div>
@@ -274,19 +275,19 @@ export default function Projects() {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-20 text-center glass-card p-12 animate-fadeInUp delay-500">
-          <h3 className="text-3xl sm:text-4xl font-bold mb-4">
+        <div className="mt-12 sm:mt-20 text-center glass-card p-8 sm:p-12 animate-fadeInUp delay-500">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
             <span className="gradient-text">Want to see more?</span>
           </h3>
-          <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-slate-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
             These are just a few highlights. I'm constantly working on new projects and exploring emerging technologies.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-full text-lg font-bold shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300"
+            className="inline-flex items-center gap-2 sm:gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 rounded-full text-base sm:text-lg font-bold shadow-2xl shadow-blue-500/30 hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300"
           >
             Let's Work Together
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
             </svg>
           </Link>
